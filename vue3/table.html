@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .fontSize{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li @click="handleClick" :class="{red:isred}">button1</li>
+        <li @click="handleClick" :class="{red:isred}">button2</li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#container',
+        data(){
+            return {
+                red: 'red',
+                isred: false
+            }
+        },
+        methods: {
+            handleClick(evevt){
+                var ary=document.getElementsByTagName(evevt.target.tagName.toLowerCase())
+                Array.from(ary).map((item)=>{
+                    item.className=''
+                });
+                evevt.target.className='fontSize'
+            }
+        }
+    })
+
+
+</script>

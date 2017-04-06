@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p>{{flag?name:age}}</p>
+    <button @click="handleClick">button</button>
+</div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                name: 'xxx',
+                age: 999,
+                flag: false
+            }
+        },
+        methods: {
+            handleClick(arg){
+                this.flag = true
+            }
+        },
+        computed: {
+            count(){
+                return `xxxx----${this.message}`
+            }
+        }
+    })
+
+
+</script>

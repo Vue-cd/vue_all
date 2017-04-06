@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">button</button>
+</body>
+</html>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script>
+    $('#btn').on('click',function () {
+        console.log('---------')
+        var obj={
+            body:"",
+            method:'post',
+            json:{
+                "user_id":"yangchongduo",
+                "user_password":"ycd@7688256"
+            }
+        }
+        obj.body=JSON.stringify(obj.json)
+        console.log(obj.body)
+        var url='http://localhost:3030/mock/backend-sense-passport/v1/auth/access_token/basic'
+       fetch(url,{
+           body:obj.body,
+            method:'post',
+            json:{
+                "user_id":"yangchongduo",
+                "user_password":"ycd@7688256"
+            },
+            headers:{
+                "Content-type":"application/json",
+                'X-Le-Sense-AT':''
+            },
+        }).then(function (res) {
+            return res.json()
+        }).then(function (res) {
+            console.log(res)
+        }).catch(function (err) {
+            console.log(err)
+        })
+    })
+
+
+
+
+</script>

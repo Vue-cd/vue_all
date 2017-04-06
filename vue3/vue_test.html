@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+         background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p> {{message}}</p>
+    <p>message:{{message}}</p>
+    <p>{{count}}</p>
+    <p>count{{count}}</p>
+    <button @click="handleClick('hhh')">button</button>
+    <p :class="active">class</p>
+    <p :name="xxx">xxx</p>
+    <a href="www.baidu.com">aaaaa</a>
+    <a href="wdddw.bxxxx">aaaaa</a>
+</div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                xxx:'wwww',
+                message: 'xxx',
+                active:'red'
+            }
+        },
+        methods: {
+            handleClick(arg){
+                console.log(arg)
+                console.log('oooooo')
+            }
+        },
+        // 隶属数据 不是生命周期的钩子
+        computed: {
+            count(){
+                return `xxxx----${this.message}`
+            }
+        }
+    })
+
+
+</script>

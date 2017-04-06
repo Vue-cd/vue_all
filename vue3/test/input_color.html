@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .flag {
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="btn">
+    <input type="text" v-model="name" :class="{ flag: isRed }" @focus="change('xx')">
+    <input type="text" v-model="name" :class="{ flag: isGreen }" @focus="change('yy')">
+</div>
+</body>
+</html>
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el: '#btn',
+        data(){
+            return {
+                name: 'xxxxxxxxxxxx',
+                isRed: false,
+                isGreen: false
+            }
+        },
+        methods: {
+            change(e){
+                if (e == 'xx') {
+                    this.isRed = true
+                } else if (e == 'yy') {
+                    this.isGreen = true
+                }
+            }
+        }
+    })
+
+
+</script>

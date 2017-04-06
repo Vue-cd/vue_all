@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li>{{name}}</li>
+        <li>{{add}}</li>
+        <li>{{count}}</li>
+        <li>{{age}}</li>
+    </ul>
+    <button @click="addCount">button</button>
+</div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                name: 'ycd',
+                count: 0,
+                age: 0
+            }
+        },
+        beforeCreate(){//componentWillMount
+            console.log('beforeCreated')
+        },
+        created(){// componentDidMount
+            // 在这个生命周期的钩子发送请求就不会影响 页面的加载速度
+            console.log('created')
+        },
+        computed: {
+            add(){// y因为add本身也是属性的一种 会根据this.count 的变化而变化
+                console.log('add 更新');
+                console.log('count', this.count);
+                return this.count + 1
+            }
+        },
+        watch:{
+            add:'addChange'
+        },
+        methods: {
+            addChange(val,oldVal){
+                console.log('val',val)
+                console.log('oldVal',oldVal)
+            },
+            addCount(){
+                console.log('----', this.count);
+                this.count = this.count + 1
+            }
+        },
+        beforeUpdate(){
+            console.log('beforeUpdate')
+        },
+        updated(){
+            console.log('updated')
+        }
+    })
+
+
+</script>

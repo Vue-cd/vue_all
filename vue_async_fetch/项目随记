@@ -1,0 +1,15 @@
+login 登录时fetch 登录之后做 跳转到'/' 默认显示dashboard 这个组件 在这里做是否有ok
+因为在登录页面 直接执行
+重点action: 放在全局是最好的 尽管有点冗余
+
+this.$store.dispatch('loginAction',{body,json})  loginAction 一定是函数的名字
+使用class 的时候必须下面生命一个变量 奇怪了
+
+
+
+
+首先 在dashboard 里面 需要GET_LIMITS 和LOGIN LONGOUT
+
+
+我只要使用mapAction就的需要使用 getters 过来吗 这不好吧
+ this.$router.push('')// 路径就可以了

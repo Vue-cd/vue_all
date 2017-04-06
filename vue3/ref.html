@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="id">
+    <div class="time" ref="btn">button</div>
+</div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el:'#id',
+        created(){
+            var dom=document.querySelector('.time')
+            console.log(dom)
+            //console.log(this.$refs.btn.tagName)
+            console.log(this.$refs)
+            console.log(this.$refs.btn)
+        }
+    })
+
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+    <span v-text="name"></span>
+    <input type="text" v-model="price">
+    <input type="number" v-model="number">
+    <br>
+    <span>{{allPrice}}</span>
+</div>
+</body>
+</html>
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el: '#container',
+        data(){
+            return{
+                name:'xxxxxxxxx',
+                price:10,
+                number:1,
+            }
+        },
+        computed:{
+            allPrice(){
+                console.log('---------')
+                return this.price*this.number
+            }
+        }
+    })
+
+
+</script>

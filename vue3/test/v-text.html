@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <button id="btn" @click.stop="handleClick">button</button>
+    <div :class="{red:ok}">xxxxx</div>
+    <pre>上面是绑定 class属性</pre>
+    <div :style="{fontSize:'20px'}">bbbbbbbbbbbbbb</div>
+    <pre>这是绑定style属性</pre>
+    <div v-bind="{id:2}">ccccccc</div>
+    <pre>这是绑定一个普通的对象</pre>
+</div>
+</body>
+</html>
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el: '#container',
+        data(){
+            return {
+                red:'red',
+                ok: false,
+            }
+        },
+        methods: {
+            input
+            handleClick(){
+                this.name=
+                this.ok = !this.ok
+            }
+        }
+    })
+
+
+</script>
