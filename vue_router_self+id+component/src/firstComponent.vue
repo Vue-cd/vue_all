@@ -8,6 +8,8 @@
         <input type="number" v-model="number">
         <br>
         <p><span class='count'>总的价格:</span><span v-text="count"></span></p>
+        <br>
+        <button @click="go">go(-1)</button>
     </div>
 </template>
 <script>
@@ -22,6 +24,10 @@
         methods: {
             handleClick(){
                 console.log('------------')
+            },
+            go(){
+                // 这就是编程是导航
+                this.$router.go(-1)
             }
         },
         created(){

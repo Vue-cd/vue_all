@@ -26,10 +26,8 @@
             },
             async handleClick(){
                 var data = await axios.get('https://cnodejs.org/api/v1/topics').then((response) => {
-                    console.log();
                     return response.data.data
                 });
-
                 console.log('data', data)
             }
         },

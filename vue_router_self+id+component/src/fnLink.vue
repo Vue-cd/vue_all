@@ -1,6 +1,7 @@
 <template>
     <div>
         <p>编程式导航</p>
+        <p>name:{{$route.query.name}}</p>
         <button @click="handleGO">go</button>
     </div>
 </template>
