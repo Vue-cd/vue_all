@@ -30,6 +30,11 @@
             handleClick(){
                 this.flag = !this.flag
             }
+        },
+        //不管是进入一个路由还是离开一个路由，都是可以的
+        beforeRouteEnter(to, from, next){
+            window.confirm('进入这个路由要做的事情')
+            next()// 必须有这个否则 进行不下去
         }
     }
 </script>
