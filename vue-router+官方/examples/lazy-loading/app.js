@@ -28,8 +28,7 @@ const Foo = resolve => require(['./Foo.vue'], resolve)
 nested route in the same async chunk, you will need to use
 require.ensure. The 3rd argument is the chunk name they belong to -
 modules that belong to the same chunk should use the same chunk name.*/
-// 一组组件的话 第三个参数是组件的名字
-
+//一个组件 有父子组件的时候我们是可以放在三个的
 const Bar = r => require.ensure([], () => r(require('./Bar.vue')), '/bar')
 const Baz = r => require.ensure([], () => r(require('./Baz.vue')), '/bar')
 

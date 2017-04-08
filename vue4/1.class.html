@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .color{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li>数组【】大部分是按照多个运行 {}</li>
+        <li>三元运算符的样式</li>
+        <li :class="[flag?'red':'']">xxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <button @click.prvent="handleFlag">handleFlag</button>
+        <li>数组的话就不是类名了而是一些 属性</li>
+        <li :class="[red,color]">数组的样式</li>
+        <li :class="{red:active}">yangchongduo</li>
+        <br>
+        <span>内联式 是:style</span>
+        <li :style="{color:'red'}">内联是</li>
+        <button @click="handleClick">handleClick</button>
+    </ul>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                red:'red',
+                color:'color',
+                active: false,
+                flag:false
+            }
+        },
+        methods: {
+            handleClick(){
+                this.active = true
+            },
+            handleFlag(){
+                this.flag=true
+            }
+        }
+    })
+
+
+</script>

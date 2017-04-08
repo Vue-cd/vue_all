@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <template v-if="flag">
+        <div>xxx</div>
+    </template>
+    <template v-else="flag">
+        <div>ccccccccccc</div>
+    </template>
+    <br> <span>不知道为什么 v-show在 template 是不好使用的 </span>
+        <div v-show="flag">v-show</div>
+    <button @click="handleClick">handleClick</button>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                name: 'xxx',
+                flag: false
+            }
+        },
+        methods: {
+            handleClick(){
+                this.flag = true
+            }
+        }
+    })
+</script>

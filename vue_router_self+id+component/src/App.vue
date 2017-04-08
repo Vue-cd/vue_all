@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!--<img src="./assets/logo.png">-->
     <h1>{{msg}}</h1>
     <h2>测试vue的</h2>
     <ul>
@@ -11,6 +11,7 @@
       <li><router-link :to="{path:'/vuex'}"> go to vuex</router-link></li>
       <li><router-link :to="{path:'/vue-resource',query:{name:'xxxx'}}">vue-resource</router-link></li>
       <li><router-link :to="{path:'/fnLink',query:{name:'ccc'}}">编程式导航</router-link></li>
+      <li><router-link :to="{path:'/TestVue',query:{name:'xxxxx'}}">TestVue</router-link></li>
     </ul>
     <router-view></router-view>
   </div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in obj">{{item.message}}</li>
+    </ul>
+    <br>
+    <table>
+        <tr v-for="(item,key,index) in ary">
+            <td>{{key}}:{{item.name}}</td>
+            <td>{{key}}:{{item.age}}</td>
+            <td>{{key}}:{{item.color}}</td>
+        </tr>
+    </table>
+    <ul>
+        <li v-for="(value,key) in object">
+            key:{{key}};
+            <br>
+            value:{{value}}
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                obj:[
+                    {message:'xxx'},
+                    {message:'ccc'},
+                    {message:'dddd'},
+                ],
+                // 这是一个数组里面是对象
+                ary: [
+                    {name: 'xxx', age: 99, color: 'red'},
+                    {name: 'yy', age: 900, color: 'rcccc'}
+                ],
+                // 假如是一个对象呢
+                object:{
+                    name:'xxx',
+                    age:'cc',
+                    hobby:'love'
+                }
+            }
+        },
+
+    })
+</script>

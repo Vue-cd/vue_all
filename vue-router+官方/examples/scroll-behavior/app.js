@@ -30,11 +30,11 @@ const scrollBehavior = (to, from, savedPosition) => {
     console.log('to.hasd--->',to.hash)
     // new navigation.
     // scroll to anchor by returning the selector
-    if (to.hash) {
+    if (to.hash) { // 这都是固定的写法 直接copy 就可以
       position.selector = to.hash
     }
     // check if any matched route config has meta that requires scrolling to top
-    if (to.matched.some(m => m.meta.scrollToTop)) {
+    if (to.matched.some(m => m.meta.scrollToTop)) {// 谁符合就 到哪个位置 返回这个函数的返回值
       // cords will be used if no selector is provided,
       // or if the selector didn't match any element.
       position.x = 0;

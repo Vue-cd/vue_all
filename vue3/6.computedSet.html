@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <br>
+    {{firstName}}
+    <br>
+    {{lastName}}
+    <br>
+    {{fullName}}
+    <br>
+    <input type="text" v-model="fullName">
+    <br>
+    <button @click="handleClick">handleClick</button>
+</div>
+<script src="./vue.js"></script>
+<script>
+new Vue({
+    el:'#app',
+    data(){
+        return{
+            firstName:'data',
+            lastName:'xxx'
+        }
+    },
+    computed:{
+        fullName:{
+            set:function (val) {
+                // 一个属性发生变化想做一些的处理的时候，尽量少使用watch 最好使用set 这个点去操作
+                console.log('xxxx');
+                this.firstName=val.split(' ')[0];
+                this.lastName=val.split(' ')[1];
+            },
+            get:function () {
+                return this.firstName+' '+this.lastName
+            }
+        }
+    },
+    methods:{
+        handleClick(){
+            //this.
+        }
+    }
+
+})
+</script>
+</body>
+</html>
