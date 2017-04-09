@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <form action="">
+        <input type="text">
+        <br>
+        <span>提交表单的时候 默认行为是 刷新页面 利用prevent 可以组织默认的行为</span>
+        <button @keyup.tab="handleClick" @click.prevent="handleClick" @keyup.enter="handleClick">button</button>
+
+        <!--<input type="submit" value="submit">-->
+    </form>
+    <button @click.once="handleOnce">handleOnce</button>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+
+            }
+        },
+        methods:{
+            handleClick(){
+                console.log('xxxxxxxx')
+            },
+            handleOnce(){
+                console.log('handleOnce')
+            }
+        }
+    })
+
+
+
+</script>

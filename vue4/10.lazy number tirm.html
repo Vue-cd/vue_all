@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="number" v-model.number="number">
+    <br>
+    <span>number：</span>{{number}}
+    <input type="text" v-model.trim="msg">
+    <pre>多个空格会被认为是一个空格 假如 有 trim 首位空给会被去掉</pre>
+    <span>trim：</span>{{msg}}xxx
+    <br>
+
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                value:'',
+                msgMiddle:''
+            }
+        },
+        computed:{
+            number:{
+                set(val){
+                    console.log(typeof val)
+                    this.value=val
+                    return val
+                },
+                get(){
+                    return this.value
+                }
+            },
+            msg:{
+                set(val){
+                    console.log(val)
+                    this.msgMiddle=val;
+                    return val
+                },
+                get(){
+                    return this.msgMiddle
+                }
+            }
+        }
+    })
+
+</script>

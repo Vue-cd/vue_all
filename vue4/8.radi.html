@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="radio" id="one" value="One" v-model="picked">
+    <label for="one">One</label>
+    <br>
+    <input type="radio" id="two" value="Two" v-model="picked">
+    <label for="two">Two</label>
+    <span>Picked: {{ picked }}</span>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                value:''
+                //picked: ''
+            }
+        },
+        computed: {
+            picked: {
+                set(val){
+                    console.log(val)
+                    this.value=val
+                    return val
+                },
+                get(){
+                    // ok 看来想通过这种方式 操作
+                    return this.value
+                }
+            }
+        }
+    })
+
+
+</script>

@@ -11,7 +11,7 @@
     </ul>
     <br>
     <table>
-        <tr v-for="(item,key,index) in ary">
+        <tr v-for="(item,key,index) in ary" :key="item.key">
             <td>{{key}}:{{item.name}}</td>
             <td>{{key}}:{{item.age}}</td>
             <td>{{key}}:{{item.color}}</td>
@@ -24,6 +24,14 @@
             value:{{value}}
         </li>
     </ul>
+    <br>
+    <ul>
+        <li v-for="item in realAry">
+            {{item}}
+        </li>
+    </ul>
+    <button @click="handleClick">push and pop</button>
+    <button @click="handleUpdate">handleUpdate</button>
 </div>
 </body>
 </html>
@@ -33,6 +41,9 @@
         el: '#app',
         data(){
             return {
+                realAry:[
+                    1,2,3,4
+                ],
                 obj:[
                     {message:'xxx'},
                     {message:'ccc'},
@@ -51,6 +62,19 @@
                 }
             }
         },
-
+        methods:{
+            handleClick(){
+                // 会自动更新 数组的一些方法
+                this.obj.push({message:'ccccc'})
+            },
+            handleUpdate(){
+                console.log('handleUpdate')
+//                this.realAry.splice(1,1,100)
+//                //不是引用数据类型所以是不可以的
+//                this.realAry[2]=99999
+                // 这个是看可以的
+                this.$set(this.realAry,2,100000000)
+            }
+        }
     })
 </script>

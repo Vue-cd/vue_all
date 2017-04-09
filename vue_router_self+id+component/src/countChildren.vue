@@ -7,6 +7,7 @@
         query: <span>{{query}}</span>
         <br>
         <button @click="handleEmit">emit</button>
+        <button @click="handlePINGJI">handlePINGJI</button>
     </div>
 </template>
 <script>
@@ -20,6 +21,9 @@ export  default{
         }
     },
     methods:{
+        handlePINGJI(){
+          this.$emit('input')
+        },
         handleEmit(){
             console.log('--------------');
             //console.log(this.$emit);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--<input type="text" v-model="message">-->
+    <!--<br>-->
+    <!--message is {{message}}-->
+    <!--<br>-->
+    <span>Multiline message is:</span>
+    <p style="white-space: pre">{{ message }}</p>
+    <br>
+    <textarea v-model="message" placeholder="add multiple lines"></textarea>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return {
+                message:''
+            }
+        }
+    })
+
+
+</script>

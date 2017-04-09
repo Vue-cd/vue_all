@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" id="checkbox" value="xxxxx" v-model="checked">
+    <label for="checkbox">{{ value }}</label>
+    <br>
+    <span> 多个checkBox</span>
+    <input type="checkbox" value="jake" v-model="checkAry">
+    <label for="jake">jake</label>
+
+    <input type="checkbox" value="tom" v-model="checkAry">
+    <label for="ton">tom</label>
+    <br>
+    checkAry：{{checkAry}}
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                value:true,
+//                checked: true,
+                checkAry: []//多个时候必须是数组 要不默认就是 true 或者false
+            }
+        },
+        computed: {
+            checked: {
+                set(val){
+                    //这样就可以 set的时候一些事情了
+                    this.value=val
+                    return val
+                },
+                get(val){
+                    return this.value
+                }
+            }
+        }
+    })
+</script>

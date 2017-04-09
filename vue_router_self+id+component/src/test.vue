@@ -3,8 +3,10 @@
         <p>testVue</p>
         {{name}}
         <button @click="handleClick">handleClick</button>
-        <span>写法一:</span><p v-bind="{id:'xxx'}">xxxx</p>
-        <span>写法二:</span><p :id="'cccc'">cccc</p>
+        <span>写法一:</span>
+        <p v-bind="{id:'xxx'}">xxxx</p>
+        <span>写法二:</span>
+        <p :id="'cccc'">cccc</p>
         <p>可以像react一样 做{} 一些简单的业务逻辑处理</p>
         <p>{{age+1}}</p>
         <p>三元运算符</p>
@@ -12,6 +14,7 @@
         <button @click="handleOK">handleOK</button>
         <p>{{ message.split('').reverse().join('') }}</p>
         <a :href="url">goBAIdu</a>
+        <button @click="handleEmit">handleEmit</button>
     </div>
 </template>
 <script>
@@ -19,15 +22,19 @@
         data(){
             return {
                 name: 'xxx',
-                age:99,
-                ok:true,
-                url:'www.baidu.com',
-                message:'yangchongduo'
+                age: 99,
+                ok: true,
+                url: 'www.baidu.com',
+                message: 'yangchongduo'
             }
         },
         methods: {
+            handleEmit(){
+                this.$emit('input')
+                this.$router.push('fnLink')
+            },
             handleOK(){
-              this.ok= false
+                this.ok = false
             },
             handleClick(event){
 //                console.log(event)
@@ -48,7 +55,7 @@
 //                console.log(oldVal)
 //              //  console.log('lllllllll')
 //            },
-            'name':'nameChange',
+            'name': 'nameChange',
             '$route' (to, from) {
                 console.log('-----------------')
                 const toDepth = to.path.split('/').length

@@ -7,14 +7,18 @@
         <div>{{name}}</div>
         <button @click="handleClick">button</button>
         <p>父子组件通信的时候 v-on是绝对不能去掉的 v-on </p>
-        <countChildren @emit="handleEmit" :paFlag.sync="flag"></countChildren>
+        <countChildren @emit="handleEmit" :paFlag="flag"></countChildren>
+        <p>-------------------------------</p>
+        <Emit></Emit>
     </div>
 </template>
 <script>
     import countChildren from './countChildren.vue'
+    import Emit from './emit.vue'
     export default{
         components:{
-            countChildren
+            countChildren,
+            Emit
         },
         data(){
             return{

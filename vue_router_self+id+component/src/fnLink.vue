@@ -12,6 +12,12 @@
                name:'xxx'
            }
        },
+       created(){
+           console.log('---------------')
+         this.$on('input',function () {
+             console.log('xxxxxxxxxxxxxxxx')
+         })
+       },
        methods:{
            handleGO(){
              //  console.log(this.$router);

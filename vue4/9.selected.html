@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <select  multiple  name="" id="" v-model="selected">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+    </select>
+    <div>selected:{{selected}}</div>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                value:[],
+                // 如果是单选的话就 初始值是字符串， 如果是多选的话就使用 数组【】
+//                selected:''
+            }
+        },
+        computed:{
+            selected:{
+                // ok多了 一下proxy 还是不错的
+                set(val){
+                    this.value=val
+                    return val
+                },
+                get(){
+                    return this.value
+                }
+            }
+        }
+    })
+
+
+</script>
