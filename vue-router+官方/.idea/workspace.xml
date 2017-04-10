@@ -23,49 +23,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/scroll-behavior/app.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/transitions/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <marker date="1491561959805" expanded="true" signature="204:296" ph="..." />
-                <marker date="1491561959805" expanded="false" signature="234:246" ph="..." />
-                <marker date="1491561959805" expanded="true" signature="1666:2022" ph="..." />
-                <marker date="1491561959805" expanded="true" signature="1708:1964" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/lazy-loading/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-              <folding>
-                <marker date="1480056178931" expanded="true" signature="1877:2217" ph="..." />
-                <marker date="1480056178931" expanded="true" signature="1909:2159" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/data-fetching/Post.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="66">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/transitions/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1562">
-              <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="12" />
+            <state relative-caret-position="310">
+              <caret line="73" column="32" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1491821909948" expanded="true" signature="130:180" ph="..." />
+                <marker date="1491821909948" expanded="true" signature="754:904" ph="..." />
+                <marker date="1491821909948" expanded="true" signature="818:893" ph="..." />
+                <marker date="1491821909948" expanded="true" signature="1526:1965" ph="..." />
+                <marker date="1491821909948" expanded="true" signature="1564:1840" ph="..." />
+                <marker date="1491821909948" expanded="true" signature="1885:1954" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/global.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -86,6 +76,9 @@
       <find>alert</find>
       <find>guardRoute</find>
       <find>scrollBehavior</find>
+      <find>slide-right</find>
+      <find>fade-enter-active</find>
+      <find>view</find>
     </findStrings>
     <replaceStrings>
       <replace>console.log</replace>
@@ -127,6 +120,8 @@
         <option value="$PROJECT_DIR$/examples/basic/app3.js" />
         <option value="$PROJECT_DIR$/examples/navigation-guards/app.js" />
         <option value="$PROJECT_DIR$/examples/scroll-behavior/app.js" />
+        <option value="$PROJECT_DIR$/examples/transitions/index.html" />
+        <option value="$PROJECT_DIR$/examples/transitions/app.js" />
       </list>
     </option>
   </component>
@@ -146,8 +141,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -195,8 +192,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,43 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scroll-behavior" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue-router+官方" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue-router+官方" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="navigation-guards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue-router+官方" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue-router+官方" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lazy-loading" />
+              <option name="myItemId" value="transitions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,17 +370,18 @@
       <workItem from="1491355832394" duration="7299000" />
       <workItem from="1491559969281" duration="4549000" />
       <workItem from="1491615414589" duration="710000" />
+      <workItem from="1491818284705" duration="3557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106021000" />
+    <option name="totallyTimeSpent" value="109578000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22740965" sideWeight="0.61865795" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14732143" sideWeight="0.61865795" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -458,14 +420,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/active-links/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/all/react+vue.js" />
     <entry file="file://$PROJECT_DIR$/examples/navigation-guards/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -638,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/transitions/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1166">
@@ -737,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/navigation-guards/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/scroll-behavior/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
@@ -770,8 +710,14 @@
         <state relative-caret-position="1188">
           <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
           <folding>
-            <marker date="1480056178931" expanded="true" signature="1877:2217" ph="..." />
-            <marker date="1480056178931" expanded="true" signature="1909:2159" ph="..." />
+            <marker date="1491639692000" expanded="true" signature="1374:1826" ph="{&quot;mode&quot;: 'history'...}" />
+            <marker date="1491639692000" expanded="true" signature="1475:1824" ph="[...]" />
+            <marker date="1491639692000" expanded="true" signature="1605:1693" ph="//..." />
+            <marker date="1491639692000" expanded="true" signature="1698:1820" ph="{&quot;path&quot;: '/bar'...}" />
+            <marker date="1491639692000" expanded="true" signature="1746:1814" ph="[...]" />
+            <marker date="1491639692000" expanded="true" signature="1837:2227" ph="{&quot;router&quot;: router...}" />
+            <marker date="1491639692000" expanded="true" signature="1880:2220" ph="..." />
+            <marker date="1491639692000" expanded="true" signature="1912:2162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -785,9 +731,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/data-fetching/Post.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="440">
+          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/navigation-guards/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <marker date="1491560945136" expanded="true" signature="840:955" ph="..." />
+            <marker date="1491560945136" expanded="true" signature="894:949" ph="..." />
+            <marker date="1491560945136" expanded="true" signature="3958:4432" ph="..." />
+            <marker date="1491560945136" expanded="true" signature="4002:4374" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/transitions/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/transitions/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="73" column="32" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1491821909948" expanded="true" signature="130:180" ph="..." />
+            <marker date="1491821909948" expanded="true" signature="754:904" ph="..." />
+            <marker date="1491821909948" expanded="true" signature="818:893" ph="..." />
+            <marker date="1491821909948" expanded="true" signature="1526:1965" ph="..." />
+            <marker date="1491821909948" expanded="true" signature="1564:1840" ph="..." />
+            <marker date="1491821909948" expanded="true" signature="1885:1954" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

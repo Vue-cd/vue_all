@@ -6,7 +6,7 @@
 </head>
 <body>
 <div id="app">
-    <form action="">
+    <form action="" >
         <input type="text">
         <br>
         <span>提交表单的时候 默认行为是 刷新页面 利用prevent 可以组织默认的行为</span>
@@ -15,6 +15,7 @@
         <!--<input type="submit" value="submit">-->
     </form>
     <button @click.once="handleOnce">handleOnce</button>
+    <input type="text" placeholder="手机号/邮箱/用户名" @change="handleChange" v-model="userAccount">
 </div>
 </body>
 </html>
@@ -24,10 +25,14 @@
         el:'#app',
         data(){
             return{
-
+                userAccount:''
             }
         },
         methods:{
+            handleChange(){
+                console.log('this.userAccount',this.userAccount)
+              console.log('--------------')
+            },
             handleClick(){
                 console.log('xxxxxxxx')
             },

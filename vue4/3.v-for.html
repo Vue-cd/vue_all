@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(item,index) in ary" :key="index">
+            {{item}}
+        </li>
+    </ul>
+    <div>------object-------</div>
+    <ul>
+        <li v-for="(value,key,index) in object" :key="index">
+            {{key}}::::{{value}}
+        </li>
+    </ul>
+    <div>-------obj---------</div>
+    <ul>
+        <li v-for="(value,index) in obj" :key="index">
+            {{value.name}}::::{{value.age}}
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                obj:[
+                    {name:'xxx',age:22},
+                    {name:'vvv',age:44}
+                ],
+                ary:[2,3,4,5],
+                object:{
+                    message:'xxx',
+                    age:'cc',
+                }
+            }
+        }
+    })
+</script>

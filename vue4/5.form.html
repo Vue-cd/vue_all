@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <pre>只能是v-on:sumbit.prvent不能变动</pre>
+    <form action="" v-on:submit.prevent='postForm'>
+        <input type="text" v-model="message">
+        <pre>有没有 input type=submit都可以</pre>
+        <!--<input type="submit" value="sumbit" @click="postForm">-->
+    </form>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                message: ''
+            }
+        },
+        methods: {
+            postForm(){
+                console.log('xxxxxxx')
+            }
+        }
+    })
+</script>

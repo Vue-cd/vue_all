@@ -12,8 +12,12 @@
       <li><router-link :to="{path:'/vue-resource',query:{name:'xxxx'}}">vue-resource</router-link></li>
       <li><router-link :to="{path:'/fnLink',query:{name:'ccc'}}">编程式导航</router-link></li>
       <li><router-link :to="{path:'/TestVue',query:{name:'xxxxx'}}">TestVue</router-link></li>
+      <li><router-link :to="{path:'/FiltersDriective'}">FiltersDriective</router-link></li>
+      <li><router-link :to="{path:'/transition'}">transition</router-link></li>
     </ul>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view class="view"></router-view>
+    </transition>
   </div>
 </template>
 <script>
@@ -50,6 +54,7 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+/* 路由的颜色样式*/
 .router-link-active{
   color: darkgrey;
 }
@@ -58,5 +63,12 @@ li {
 }
 a {
   color: #42b983;
+}
+/*两者缺一不可*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>

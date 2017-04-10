@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const Home = {
-  template: `
+    template: `
     <div class="home">
       <h2>Home</h2>
       <p>hello</p>
@@ -13,20 +13,23 @@ const Home = {
 }
 
 const Parent = {
-  data () {
-    return {
-      transitionName: 'slide-left'
-    }
-  },
-  // dynamically set transition based on route change
-  watch: {
-    '$route' (to, from) {
-      const toDepth = to.path.split('/').length
-      const fromDepth = from.path.split('/').length
-      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-    }
-  },
-  template: `
+    data () {
+        return {
+            transitionName: 'slide-left'
+        }
+    },
+    // dynamically set transition based on route change
+    watch: {
+        // 看自己的路由
+        '$route' (to, from) {
+            console.log('-------------------')
+            const toDepth = to.path.split('/').length
+            const fromDepth = from.path.split('/').length;
+            // 这边来确定 transitionName 是往哪边
+            this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+        }
+    },
+    template: `
     <div class="parent">
       <h2>Parent</h2>
       <transition :name="transitionName">
@@ -34,30 +37,31 @@ const Parent = {
       </transition>
     </div>
   `
-}
+};
 
-const Default = { template: '<div class="default">default</div>' }
-const Foo = { template: '<div class="foo">foo</div>' }
-const Bar = { template: '<div class="bar">bar</div>' }
+const Default = {template: '<div class="default">default</div>'};
+const Foo = {template: '<div class="foo">foo</div>'};
+const Bar = {template: '<div class="bar">bar</div>'};
 
 const router = new VueRouter({
-  mode: 'history',
-  base: __dirname,
-  routes: [
-    { path: '/', component: Home },
-    { path: '/parent', component: Parent,
-      children: [
-        { path: '', component: Default },
-        { path: 'foo', component: Foo },
-        { path: 'bar', component: Bar }
-      ]
-    }
-  ]
+    mode: 'history',
+    base: __dirname,
+    routes: [
+        {path: '/', component: Home},
+        {
+            path: '/parent', component: Parent,
+            children: [
+                {path: '', component: Default},
+                {path: 'foo', component: Foo},
+                {path: 'bar', component: Bar}
+            ]
+        }
+    ]
 })
 
 new Vue({
-  router,
-  template: `
+    router,
+    template: `
     <div id="app">
       <h1>Transitions</h1>
       <ul>
