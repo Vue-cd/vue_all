@@ -14,6 +14,7 @@
       <li><router-link :to="{path:'/TestVue',query:{name:'xxxxx'}}">TestVue</router-link></li>
       <li><router-link :to="{path:'/FiltersDriective'}">FiltersDriective</router-link></li>
       <li><router-link :to="{path:'/transition'}">transition</router-link></li>
+      <li><router-link :to="{path:'/slot'}">slot</router-link></li>
     </ul>
     <transition name="fade" mode="out-in">
       <router-view class="view"></router-view>

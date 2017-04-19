@@ -75,7 +75,8 @@ const VueResource = () => System.import('./vueResource.vue')
 const FnLink = () => System.import('./fnLink.vue')
 const TestVue=()=>System.import('./test.vue')
 const FiltersDriective=()=>System.import('./FiltersDriective.vue');
-const  Transition=()=>System.import('./transition.vue')
+const  Transition=()=>System.import('./transition.vue');
+const   Slot=()=>System.import('./slot.vue')
 Vue.use(VueRouter);
 const router = new VueRouter({
     mode: 'history',// vue 默认是 hash 我们可以利用mode:History 会自动进入hash
@@ -92,7 +93,8 @@ const router = new VueRouter({
         {path:'/fnLink',component:FnLink},
         {path:'/TestVue',component:TestVue},
         {path:'/FiltersDriective',component:FiltersDriective},
-        {path:'/transition',component:Transition}
+        {path:'/transition',component:Transition},
+        {path:'/slot',component:Slot}
     ]
 });
 export default router

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            width: 100px;
+            height: 100px;
+            border: 2px solid darkgrey;
+        }
+        .active {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<ul id="app">
+    <li @click="handle('ONEFlag')" :class="{active:flagAry[0].ONEFlag}">1</li>
+    <li @click="handle('TwoFlag')" :class="{active:flagAry[1].TwoFlag}">2</li>
+    <li @click="handle('threeFlag')" :class="{active:flagAry[2].threeFlag}">3</li>
+    <li @click="handle('FOURFlag')" :class="{active:flagAry[3].FOURFlag}">4</li>
+</ul>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return {
+                content: '',
+                object: [
+                    {ONEFlag: 1},
+                    {TwoFlag: 2},
+                    {threeFlag: 3},
+                    {FOURFlag: 4},
+                ],
+                flagAry: [
+                    {ONEFlag: false},
+                    {TwoFlag: false},
+                    {threeFlag: false},
+                    {FOURFlag: false},
+                ]
+            }
+        },
+        methods: {
+            handle(number){
+                this.flagAry.forEach((item, index) => {
+                    for (var key in item) {
+                        if (key == number) {
+                            item[key] = true;
+                            this.content = this.object[index][key];
+                            continue
+                        }
+                        item[key] = false
+                    }
+                });
+                console.log(this.content)
+            }
+        }
+    })
+
+</script>

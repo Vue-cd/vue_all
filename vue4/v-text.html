@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div v-text="message"></div>
+    <br>
+    {{message}}
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                message:'xxxx'
+            }
+        }
+    })
+
+
+</script>
